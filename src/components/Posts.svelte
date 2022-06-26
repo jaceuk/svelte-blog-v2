@@ -19,7 +19,6 @@
 
 <style type="scss">
   .inner {
-    margin-top: calc(var(--size-extra-large) * -1);
     padding-bottom: var(--size-medium);
     background: url('../images/vader.png') no-repeat right bottom;
   }

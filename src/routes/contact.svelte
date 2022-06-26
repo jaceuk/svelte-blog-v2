@@ -1,6 +1,4 @@
 <script type="ts">
-  import MdEmail from 'svelte-icons/md/MdEmail.svelte';
-  import CardTitle from '@components/CardTitle.svelte';
   import Card from '@components/Card.svelte';
   import Overlay from '@components/Overlay.svelte';
   import Loader from '@components/Loader.svelte';
@@ -94,9 +92,7 @@
   <div class="narrowContainer">
     <div class="row">
       <Card>
-        <CardTitle text="Contact form" textSize="large">
-          <MdEmail slot="icon" />
-        </CardTitle>
+        <h2>Contact form</h2>
 
         {#if processing}
           <Overlay><Loader>Sending your message</Loader></Overlay>
@@ -142,7 +138,6 @@
 
 <style type="scss">
   .inner {
-    margin-top: calc(var(--size-extra-large) * -1);
     padding-bottom: var(--size-extra-large);
     background: url('../images/vader.png') no-repeat right bottom;
     display: flex;

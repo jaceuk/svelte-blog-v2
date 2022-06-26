@@ -2,10 +2,15 @@ a {
   color: var(--color-nearly-black);
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .inner {
   max-width: var(--size-max-width);
   margin: 0 auto;
   padding: 0 var(--size-base);
+  position: relative;
 }
 
 .stack {

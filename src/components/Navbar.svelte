@@ -1,58 +1,81 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import smallJ from '@images/small-j.svg';
+  import logo from '@images/logo.svg';
 </script>
 
 <div class="container">
   <div class="inner">
-    <a href="/" class:hidden={$page.url.pathname === '/'}>
-      <img class="image" src={smallJ} alt="" />
+    <a class="logo-link" href="/">
+      <img class="image" src={logo} alt="" />
     </a>
 
     <nav>
-      <a href="/" class="button">Home</a>
-      <a href="/blog/posts" class="button">Blog</a>
-      <a href="/contact" class="button">Contact</a>
+      <a class="link" class:active={$page.url.pathname === '/'} href="/">Home</a>
+      <a class="link" class:active={$page.url.pathname === '/blog/posts'} href="/blog/posts">Blog</a>
+      <a class="link" class:active={$page.url.pathname === '/contact'} href="/contact">Contact</a>
+      <span class="underline" />
     </nav>
   </div>
 </div>
 
 <style lang="scss">
   .container {
-    padding: var(--size-base) 0;
-    position: absolute;
-    width: 100%;
+    padding: var(--size-medium) 0 0 0;
     z-index: 50;
   }
 
   .inner {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+  }
 
-    @media (max-width: 767px) {
-      justify-content: center;
-    }
+  .logo-link {
+    z-index: 20;
+  }
+
+  .link {
+    color: var(--color-white);
+    font-size: var(--font-size-small);
+    text-decoration: none;
+    padding: var(--size-base);
+    font-weight: var(--font-weight-bold);
+  }
+
+  a:nth-child(1).active ~ .underline {
+    transform: translatex(0px);
+    transition: transform 0.2s ease-out;
+  }
+
+  a:nth-child(2).active ~ .underline {
+    transform: translatex(103px);
+    transition: transform 0.2s ease-out;
+    width: 76px;
+  }
+
+  a:nth-child(3).active ~ .underline {
+    transform: translatex(195px);
+    transition: transform 0.2s ease-out;
+    width: 104px;
   }
 
   nav {
     display: flex;
-    gap: 1.6rem;
+    gap: var(--size-base);
     align-items: center;
+    z-index: 20;
+    position: relative;
   }
 
-  .hidden {
-    visibility: hidden;
-  }
-
-  .button {
-    background: var(--color-nearly-black-20);
-    border-color: var(--color-nearly-black-20);
-    color: var(--color-white);
-    box-shadow: none;
-
-    &:hover {
-      background: var(--color-nearly-black-40);
-    }
+  .underline {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 87px;
+    height: 4px;
+    background: var(--color-white);
+    border-radius: 28px;
+    z-index: -1;
+    transition: 9999s transform 0.2s ease-out;
   }
 </style>
