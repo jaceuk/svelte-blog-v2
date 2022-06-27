@@ -1,6 +1,6 @@
 <div class="title">
   <h1>Jason Newington</h1>
-  <div class="subtitle">Developer, Designer and Geek</div>
+  <div class="h3">Developer . Designer . Geek</div>
 </div>
 
 <style lang="scss">
@@ -16,13 +16,9 @@
     }
   }
 
-  .subtitle {
-    font-weight: var(--font-weight-light);
-    font-family: 'Raleway', sans-serif;
-    font-size: var(--font-size-medium);
-
-    @media (max-width: 767px) {
-      font-size: calc(var(--font-size-large) * 0.85);
-    }
+  h1 {
+    font-size: var(--font-size-max);
+    line-height: 1.05;
+    margin-bottom: var(--size-medium);
   }
 </style>

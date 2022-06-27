@@ -16,13 +16,7 @@
     }
   }
 
-  .subtitle {
-    font-weight: var(--font-weight-light);
-    font-family: 'Raleway', sans-serif;
-    font-size: var(--font-size-medium);
-
-    @media (max-width: 767px) {
-      font-size: calc(var(--font-size-large) * 0.85);
-    }
+  h1 {
+    margin-bottom: var(--size-base);
   }
 </style>

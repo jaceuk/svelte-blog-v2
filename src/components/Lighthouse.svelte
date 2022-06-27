@@ -43,7 +43,7 @@
     height: 88px;
 
     .number {
-      font-size: var(--font-size-medium);
+      font-size: var(--font-size-h3);
       width: fit-content;
       margin: 0 auto;
       padding: var(--size-base);

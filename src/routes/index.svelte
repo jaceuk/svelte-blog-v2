@@ -8,4 +8,4 @@
 </svelte:head>
 
 <Skills />
-<!-- <Projects /> -->
+<Projects />

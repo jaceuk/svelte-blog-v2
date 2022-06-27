@@ -36,7 +36,7 @@
 
   .link {
     color: var(--color-white);
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-body);
     text-decoration: none;
     padding: var(--size-base);
     font-weight: var(--font-weight-bold);
